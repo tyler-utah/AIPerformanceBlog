@@ -62,7 +62,9 @@ AsyncLoads          19460.769
 cuBLAS              23751.600
 ```
 
-A performance plot (refer to “gflops_plot.png”) visually illustrates these improvements. Notice that the most significant performance gains occur during the **ThreadTiling** and **RegisterCaching** steps, where the kernel shifts from a memory-bound implementation to one that better exploits the GPU’s compute resources.
+A performance plot visually illustrates these improvements. Notice that the most significant performance gains occur during the **ThreadTiling** and **RegisterCaching** steps, where the kernel shifts from a memory-bound implementation to one that better exploits the GPU’s compute resources.
+
+![Performance Plot](gflops_plot.png)
 
 In addition to structural changes, our optimizations involve a detailed tuning parameter search. The transformation employs a series of macros that control aspects such as:
 
